@@ -23,6 +23,11 @@ public class ShoppingCart {
         items.add(item);
     }
 
+    //Item newItem = new Item(..);
+    //sc.addItem(newItem);
+    //Item expected = sc.getItem(sc.getItemCount()-1);
+    //assertequal(expected, newItem);
+
     public Item getItem(int idx) {
         return items.get(idx);
     }

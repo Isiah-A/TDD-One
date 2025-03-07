@@ -43,9 +43,11 @@ public class BankAccount {
     }
     
     public void withdraw(double amount) {
-        if (amount <= -1){
-            throw new RuntimeException("Deposit amount must be positive");
+        if (amount < 0 ){
+            throw new IllegalArgumentException("Deposit amount must be positive");
+        }else{
+            balance = balance - amount;
         }
-        balance = balance - amount;
+
     }
 }
