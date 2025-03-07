@@ -48,9 +48,12 @@ public class BankAccount {
     }
     
     public void withdraw(double amount) {
-        if (amount < 0 ){
-            throw new IllegalArgumentException("Deposit amount must be positive");
-        }else{
+        if (amount > balance ){
+            throw new IllegalStateException("Insufficient funds");
+        }else if (amount <= 0 ){
+            throw new IllegalArgumentException("Withdrawal amount must be positive");
+        }
+        else{
             balance = balance - amount;
         }
 
