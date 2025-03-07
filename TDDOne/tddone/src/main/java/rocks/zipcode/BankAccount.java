@@ -11,28 +11,34 @@ package rocks.zipcode;
 // Student must implement this class
 public class BankAccount {
     // TODO: Implement this class to make the tests pass
-    
+    String accountNumber;
+    String ownerName;
+    Double balance;
+    Double amount;
+
+
     public BankAccount(String accountNumber, String ownerName) {
-        // Your implementation here
+        this.accountNumber = accountNumber;
+        this.ownerName = ownerName;
     }
     
     public String getAccountNumber() {
-        // Your implementation here
-        return null;
+
+        return this.accountNumber = accountNumber;
     }
     
     public String getOwnerName() {
-        // Your implementation here
-        return null;
+
+        return this.ownerName = ownerName;
     }
     
     public double getBalance() {
-        // Your implementation here
-        return 0.0;
+
+        return this.balance = getBalance();
     }
     
     public void deposit(double amount) {
-        // Your implementation here
+        this.amount = amount;
     }
     
     public void withdraw(double amount) {

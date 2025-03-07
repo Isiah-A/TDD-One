@@ -14,7 +14,7 @@ public class StringUtils {
     // TODO: Implement the following methods to make the tests pass
     
     public static String reverse(String str) {
-        // Your implementation here
+        StringBuilder sb = new StringBuilder();
         return null;
     }
     
@@ -24,8 +24,8 @@ public class StringUtils {
     }
     
     public static boolean isPalindrome(String str) {
-        // Your implementation here
-        // Note: Ignoring case and non-alphanumeric characters
+       StringBuilder sb = new StringBuilder();
+
         return false;
     }
 }
