@@ -14,8 +14,9 @@ public class StringUtils {
     // TODO: Implement the following methods to make the tests pass
     
     public static String reverse(String str) {
-        StringBuilder sb = new StringBuilder();
-        return null;
+        StringBuilder sb = new StringBuilder(str);
+        sb = sb.reverse();
+        return sb.toString();
     }
     
     public static int countOccurrences(String str, char c) {

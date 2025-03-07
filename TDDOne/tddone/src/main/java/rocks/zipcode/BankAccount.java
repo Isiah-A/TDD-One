@@ -13,8 +13,8 @@ public class BankAccount {
     // TODO: Implement this class to make the tests pass
     String accountNumber;
     String ownerName;
-    Double balance;
-    Double amount;
+    Double balance = 0.0;
+
 
 
     public BankAccount(String accountNumber, String ownerName) {
@@ -24,24 +24,28 @@ public class BankAccount {
     
     public String getAccountNumber() {
 
-        return this.accountNumber = accountNumber;
+        return accountNumber;
     }
     
     public String getOwnerName() {
 
-        return this.ownerName = ownerName;
+        return ownerName;
     }
     
     public double getBalance() {
 
-        return this.balance = getBalance();
+        return balance;
+
     }
     
     public void deposit(double amount) {
-        this.amount = amount;
+       balance = balance + amount;
     }
     
     public void withdraw(double amount) {
-        // Your implementation here
+        if (amount <= -1){
+            throw new RuntimeException("Deposit amount must be positive");
+        }
+        balance = balance - amount;
     }
 }
