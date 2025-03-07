@@ -20,14 +20,20 @@ public class StringUtils {
     }
     
     public static int countOccurrences(String str, char c) {
-        // Your implementation here
-        return 0;
+        int count = 0;
+        char [] arr = str.toCharArray();
+        for(int i = 0; i < arr.length; i++){
+            if (arr[i] == c){
+                count++;
+            }
+        }
+        return count;
     }
     
     public static boolean isPalindrome(String str) {
-       StringBuilder sb = new StringBuilder();
-
-        return false;
+        String pal = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        StringBuilder sb = new StringBuilder(pal);
+        return pal.equals(String.valueOf(sb.reverse()));
     }
 }
 
